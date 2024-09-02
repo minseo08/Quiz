@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>단답형 퀴즈 추가</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header>
+    <h1>단답형 퀴즈 추가</h1>
+</header>
+
+<main>
+    <div class="container">
+        <h2>새 퀴즈 추가</h2>
+        <form action="/short-quiz/add" method="post">
+            <label for="question">문제:</label>
+            <input type="text" id="question" name="question" required>
+
+            <label for="correctAnswer">정답:</label>
+            <input type="text" id="correctAnswer" name="correctAnswer" required>
+
+            <button type="submit">퀴즈 추가</button>
+        </form>
+        <a href="/" class="button">홈으로 돌아가기</a>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Quiz Application. All rights reserved.</p>
+</footer>
+</body>
+</html>

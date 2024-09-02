@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>퀴즈 결과</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<h1>퀴즈 결과</h1>
+<p>정답 수: <span th:text="${correctCount}"></span> / <span th:text="${totalQuestions}"></span></p>
+<a href="/" class="button">홈으로 돌아가기</a>
+<a href="/quiz" class="button">퀴즈 다시 풀기</a>
+</body>
+</html>

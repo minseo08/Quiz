@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>퀴즈 결과</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header>
+    <h1>퀴즈 결과</h1>
+</header>
+
+<main>
+    <div class="container">
+        <h2>퀴즈 결과</h2>
+        <p>총 퀴즈 개수: <span th:text="${totalQuestions}"></span></p>
+        <p>정답 수: <span th:text="${correctCount}"></span></p>
+        <a href="/" class="button">홈으로 돌아가기</a>
+        <a href="/short-quiz" class="button">퀴즈 다시 풀기</a>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Quiz Application. All rights reserved.</p>
+</footer>
+</body>
+</html>

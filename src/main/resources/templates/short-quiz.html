@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>단답형 퀴즈</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script>
+        // 페이지 로드 시 input에 자동으로 포커스
+        function focusOnInput() {
+            document.getElementById("answerInput").focus();
+        }
+    </script>
+</head>
+<body onload="focusOnInput()">
+<header>
+    <h1>단답형 퀴즈</h1>
+</header>
+
+<main>
+    <div class="container">
+        <h2 th:text="${quiz.question}">퀴즈 질문</h2>
+        <form action="/short-quiz/submit" method="post">
+            <label for="answerInput">정답:</label>
+            <input type="text" id="answerInput" name="answer" required />
+            <button type="submit">제출</button>
+        </form>
+
+        <!-- 정답 확인 메시지 표시 -->
+        <div th:if="${isCorrect != null}">
+            <p th:text="${isCorrect ? '정답!' : '오답!'}"></p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Quiz Application. All rights reserved.</p>
+</footer>
+</body>
+</html>

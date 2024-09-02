@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>이미지 퀴즈 추가</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header>
+    <h1>이미지 퀴즈 추가</h1>
+</header>
+
+<main>
+    <div class="container">
+        <form action="/image-quiz/add" method="post"> <!-- POST 메서드 확인 -->
+            <label for="imageUrl">이미지 URL:</label>
+            <input type="text" id="imageUrl" name="imageUrl" required />
+
+            <label for="correctAnswer">정답:</label>
+            <input type="text" id="correctAnswer" name="correctAnswer" required />
+
+            <button type="submit">Add Quiz</button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Quiz Application. All rights reserved.</p>
+</footer>
+</body>
+</html>
